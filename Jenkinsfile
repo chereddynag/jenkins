@@ -18,8 +18,6 @@ pipeline{
                 }
             }
         }
-        stage("login to docker Hub"){
-            
-        }
-    }
+        
+}
 }
