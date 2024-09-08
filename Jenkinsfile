@@ -1,9 +1,9 @@
 pipeline{
     agent any
     stages {
-        stage(" Hello"){
+        stage("cloning the repo "){
             steps {
-                sh 'echo "Hello world"'
+                sh 'mvn --version'
             }
         }
     }
