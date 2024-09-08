@@ -6,11 +6,11 @@ pipeline{
         
     }
     stages {
-        stage("checkout the code"){
-            steps {
-                git url: 'https://github.com/chereddynag/jenkins.git'
-            }
-        }
+        // stage("checkout the code"){
+        //     steps {
+        //         git url: 'https://github.com/chereddynag/jenkins.git'
+        //     }
+        // }
         stage('Build docker Image'){
             steps{
                 script{
