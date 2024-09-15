@@ -35,7 +35,7 @@ pipeline{
                 script{
                     
                     sh 'gcloud auth configure-docker ${GCR_REGION} '
-                    sh 'gcloud push ${GCR_IMAGE_URI}'
+                    sh 'docker push ${GCR_IMAGE_URI}'
                     }
                 }
             }
