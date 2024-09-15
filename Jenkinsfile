@@ -29,6 +29,7 @@ pipeline{
                     sh 'docker build -t ${GCR_IMAGE_URI} .'
             }
         }
+        }
         stage("login and push the image to the docker hub"){
             steps{
                 script{
@@ -38,7 +39,7 @@ pipeline{
                     }
                 }
             }
-        }
+        
         stage("Cleaning the local images"){
             steps{
                 script{
