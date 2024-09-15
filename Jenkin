@@ -39,7 +39,7 @@ pipeline{
                     }
                 }
             }
-        }
+        
         stage("Cleaning the local images"){
             steps{
                 script{
@@ -71,3 +71,4 @@ pipeline{
         
 }
 }
+
