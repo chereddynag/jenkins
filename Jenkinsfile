@@ -17,7 +17,7 @@ pipeline{
         stage('Authenticate with GCP'){
             steps{
             script{
-            sh 'echo ${GOOGLE_APPLICATION_CREDENTIALS} | base64 --decode > /tmp/gcloud-key.json'
+            sh 'echo $GOOGLE_APPLICATION_CREDENTIALS | base64 --decode > /tmp/gcloud-key.json'
             sh 'gcloud config set project fluted-volt-428205-p7'
             sh 'gcloud auth activate-service-account --key-file=/tmp/gcloud-key.json'
         }
