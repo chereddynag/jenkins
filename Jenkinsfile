@@ -26,7 +26,7 @@ pipeline{
         stage('Build docker Image'){
             steps{
                 script{
-                    sh 'docekr build -t ${GCR_IMAGE_URI}'
+                    sh 'docker build -t ${GCR_IMAGE_URI} .'
             }
         }
         stage("login and push the image to the docker hub"){
