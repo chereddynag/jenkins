@@ -19,7 +19,7 @@ pipeline{
             script{
             // sh 'echo ${GOOGLE_APPLICATION_CREDENTIALS} | base64 --decode > /tmp/gcloud-key.json'
             sh 'gcloud config set project ${GCR_PROJECT_ID}'
-            sh 'gcloud auth activate-service-account --key-file=/opt/devops.json'
+            sh 'gcloud auth activate-service-account --key-file=/tmp/devops.json'
         }
         }
         }
