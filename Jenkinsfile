@@ -50,7 +50,7 @@ pipeline{
                 }
             }
         }
-        stage(checking the cluster connectivity){
+        stage("checking the cluster connectivity"){
             steps{
                 script{
                     sh 'kubectl cluster-info'
