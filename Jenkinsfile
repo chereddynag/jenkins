@@ -6,7 +6,7 @@ pipeline{
     environment {
         IMAGE_NAME = "${env.JOB_NAME}"
         GCR_REGION = "us-west1-docker.pkg.dev"
-        GCR_IMAGE_URI = "${GCR_REGION}/${GCR_PROJECT_ID}/chereddy/${env.JOB_NAME}:${env.BUILD_NUMBER}"
+        GCR_IMAGE_URI = "${GCR_REGION}/${GCR_PROJECT_ID}/${env.JOB_NAME}:${env.BUILD_NUMBER}"
         GOOGLE_APPLICATION_CREDENTIALS = credentials('mydevops')
         GCR_PROJECT_ID = 'fluted-volt-428205-p7'
         GKE_CLUSTER = 'my-k8-cluster'
